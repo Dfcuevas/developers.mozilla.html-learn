@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Formato de texto avanzado</title>
+
+  <style>
+    .spanstyl {
+      background-color: gray;
+      color: red;
+    }
+  </style>
 </head>
+
 <body>
 
   <h1>Formato avanzado de texto</h1>
@@ -23,6 +32,32 @@
   </dl>
 
   <h2>Citas</h2>
+  <h3>Cita en bloque independiente</h3>
 
+  <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>El <strong>elemento HTML <code>&lt;blockquote&gt; </code></strong> (o <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al que delimita es una cita ampliada</p>
+  </blockquote>
+
+  <h3>Citas en línea</h3>
+
+  <p>El elemento de cita (<code>&lt;q&gt;</code>) se <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+      utiliza en citas cortas que no requieren saltos de párrafo.
+    </q></p>
+  <p>El contenido del atributo <span class="spanstyl">cite</span> puede parecer útil, pero desafortunadamente los navegadores, lectores de pantalla, etc., no suelen trabajar con él. No hay manera de conseguir que el navegador muestre el contenido de
+    la cita sin necesidad de que escribas tu solución utilizando JavaScript o CSS. Si deseas disponer de la fuente de la cita en la página, tienes que utilizar un enlace o buscar otra solución que resulte apropiada.</p>
+
+  <h3>Elemento &lt;cite&gt;</h3>
+  <p>De acuerdo con la <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+      <cite>página de MDN de citas en bloque independiente</cite></a>
+  </p>
+
+  <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>El <strong>elemento HTML <code>&lt;blockquote&gt; </code></strong> (o <em> Elemento de cita de bloque en HTML</em>)
+      indica que el texto adjunto es una cita extendida.</p>
+  </blockquote>
+
+  <p>El elemento de cita (<code>&lt;q&gt;</code>) se <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"> utiliza en las citas cortas que no requieren saltos de párrafo.</q> -- <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q""> <cite>página de MDN de q</cite></a>.</p>
 </body>
+
 </html>
