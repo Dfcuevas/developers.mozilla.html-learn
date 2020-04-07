@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estructura web y documentación</title>
+</head>
+
+<body>
+  <h1>Estructura web y documentación</h1>
+
+  <h2>Parte básicas de un documento.</h2>
+
+  <p>Las págians web pueden y deben diferenciarse las unas de las otras, pero todas tienden a contener elementos comunes parecidos, a menos que estén destinadas a mostrar un vídeo o un juego a pantalla completa, o que formen parte de un proyecto
+    artístico contreto o, simplemente, que estén mal estructuradas. Estos elementos comunes son: </p>
+
+  <h3>header (encabezado):</h3>
+  <p>Normalmente formado por una gran franja que cruza la parte superior de la página con <strong>título de encabezamiento</strong> y/o un logo. Esta parte suele permanecer invariable mientras navegamos entre las páginas de un mismo sitio web.</p>
+
+  <h3>navigation bar (barra/menú de navegación):</h3>
+  <p>Son los enlaces a las secciones principales del sitio web. Normalmente está formada por un menú con botones, enlaces o pestañas. Al igual que el <strong>encabezado</strong>, este contenido suele permanecen las diferentes páginas del sitio; tener
+    un menú incoherente en nuestra página web inducirá a los usuarios a la confusión y la frustración. Muchos diseñadores web consideran que el menú de navegación forma parte del encabezado y que no posee un componente individual, aunque no es
+    necesario que sea asi; de hecho, algunos argumentan que tener ambos componentes or separado es mejor por motivos de accesibilidad por que los lectores de pantalla pueden leer mejor ambos elementos si están separados.</p>
+
+  <h3>main content (contenido principal):</h3>
+
+  <p>Es la parte ancha central de nuestra página y contiene la mayor parte del contenido particular de una página web concreta; por ejemplo, el video que quierer ver, la narración que quieres leer, el mapa que quieres consultar, los titulares de las
+    noticioas, etc. Esta es la parte que puede variar mucho de una pagina a otra de nuestro sitio web.</p>
+
+  <h3>sidebar (menú/barra lateral):</h3>
+  <p>Suele incluir algún tipo de información adicional, enlaces, citas, publicidad, etc. Normalmente esta relacionado con el contenido principal de la página (por ejemplo, en una página de noticias, la barra lateral podría contener la biografia del
+    autor o enlaces a articulos relacionados), pero en otras ocaciones encontraremos elementos recurrentes como un menú de navegación secundario.</p>
+
+  <h3>footer (pie de página):</h3>
+
+  <p>Es la parte inferior de la página, que generamlente contiene la letra pequeña, el copyright o la informacion de contacto. Es el sitio donde se coloca la informacion común (al igual que en el elcabezado), pero esta información no suele ser tan
+    importante o es secundaria con respecto a la pagina en sí misma. El pie también se suele usar para propósitos SEO, e incluye enlaces de acceso rápido al contenido más popular, </p>
+
+  <h2>HTML para dar estructura al contenido</h2>
+
+  <p>HTML dispone de etiquetas adecuadas que podemos usar para establecer estas secciones semánticas, por ejemplo:</p>
+
+  <ul>
+    <li><strong>header (encabezado)</strong>: &lt;header&gt;.</li>
+    <li><strong>navigation bar (menú de navegación)</strong>: &lt;nav&gt;.</li>
+    <li><strong>main content (contenido principal)</strong>: &lt;main&gt;, con varias subsecciones (ademas de la barra lateral) representadas por los elementos &lt;article&gt;, &lt;section&gt;, y &lt;div&gt;.</li>
+    <li><strong>sidebar (barra lateral):</strong> &lt;aside&gt;</li>
+    <li><strong>footer (pie de página):</strong> &lt;footer&gt;</li>
+  </ul>
+
+  <h2>Elementos de diseño HTML en detalle</h2>
+
+<p>Es bueno entender el significado global de todos los elementos definitorios de las secciones HTML en detalle; es algo que se trabajará gradualmente a medida que comencemos a tener más experiencia en el desarrollo web. En el enlace <strong>referencia a elementos HTML</strong> podemos leer la lista de estos elementos en detalle. Por el momento, estas son las definiciones principales que deberíamos tratar de entender:</p>
+
+<ul>
+  <li><strong>main</strong> contendra el contenido particular de esta pagina. Utilizaremos main solamente una vez para cada pagina y lo situaremos directamente dentro del elemento body. Mejor que no lo anidemos con otros elementos.</li>
+  <li><strong>article</strong> encuadra un bloque de contenido que tiene sentido por si mismo aparte del resto de la pagina (por ejemplo una entrada de blog)</li>
+  <li><strong>section</strong> es parecido al elemento article, pero se usa más apra agrupar cada parte de la pagina que, por su funcionalidad, constituye una seccion en si misma (por ejemplo un minimapa o un conjunto de titulares y resumenes). Se considera una buena practica comenzar cada una de estas secciones con un titulo de encabezamiento (heading); observa que podemos sibdividir articulos en distintas secciones, o tambien secciones en distintos articulos, dependiendo del contexto.</li>
+  <li><strong>aside</strong> incluye contenido que no esta directamente relacionado con el contenido principal, pero que puede aportar informacion adicional relacionada indirectamente con el (resumenes, biografias del autor, enlaces relacionados, etc).</li>
+  <li><strong>header</strong> representa un grupo de contenido introductorio. Si este hijo de un elemento body, se convertira en el encabezado principal del sitio web, peri si es hijo de un elemento article o un elemento section, entonces simplemente sera el <strong>encabezado</strong> particular de cada seccion (por favor, no lo confundas con titulos y encabezamientos).</li>
+  <li><strong>footer</strong> representa el contenido del pie de pagina.</li>
+</ul>
+</body>
+
+</html>
