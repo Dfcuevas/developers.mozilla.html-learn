@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video en HTML</title>
+</head>
+
+<body>
+  <h1>El elemento &lt;video&gt;</h1>
+
+  <p>El elemento video nos permite embeber video facilmente. Un ejemplo realmente simple loce como lo siguiente</p>
+
+  <video src="rabbit320.webm" controls>
+    <p>Tu navegador no soporta HTML5 video. Aqui esta el <a href="rabbit320.webm">enlace del video</a></p>
+  </video>
+
+  <p>Las caracteristicas a notar son:</p>
+
+  <ul>
+    <li>controls: <br>
+    Los usuarios deben ser capacer de controlar la reproduccion de video y audio (esto es especialmente critico en personas que padecen epilepsia). Se debe utilizar el atributo controls para incluir la interfaz de control del navegador, o construir la nuestra utilizando la JavaScript API apropiada. Como minimo la interfaz debe incluir una manera de empezar y terminar la reproduccion y ajustar el volumen.</li>
+    <li><strong>El párrafo dentro de la etiqueta video:</strong> <br>
+    Se lo llama <strong>fallback content</strong> (contenido de reserva) --y será mostrado si el browser desde el que se esta accediendo a la pagina no soporta el elemento video, permitiendonos proveer un fallback para navegadores mas antiguos. Puede ser de la manera que se quiera; en este caso proporcionamos un link directo al archivo de video, por lo que el usuario puede al menos acceder de alguna manera, independientemente del navegador que este usando.</li>
+  </ul>
+
+  <h2>Soportando multiples formatos</h2>
+
+  <p>
+    En el ejemplo anterior, el video no funtiona si intentas reproducirlo en safari o IE, esto es por que diferentes navegadores soportan diferentes formatos de video (y audio)
+  </p>
+  <p>Las pistas de audio y video estan tambien en diferentes formatos como por ejemplo</p>
+
+  <ul>
+    <li>Un webm usualmente contiene paquetes Ogg Vorbis audio con VP8/VP9 video. Soportado principalmente por Firefox y Chrome.</li>
+    <li>Un MP4 contiene a menudo paquetes AAC o audio MP3 con videos H.264. Principalemnte soportados en IE y Safari.</li>
+    <li>El antiguo contenedor Ogg suele ir con audio Ogg Vorbis y Video Ogg Theora. Es principalmente soportado por Firefox y Chrome, pero basicamente ha sido reemplazado por el formato WebM de mejor calidad</li>
+  </ul>
+
+  <p>Los formatos anteriores existen para comprimir los archivos de audio y video volviendolos manejables, pero no todos los navegadores soportan los mismos codecs, entonces habra que proveer varios archivos para cada produccion multimedia.</p>
+
+  <p>Para arreglar eso, podemos hacer lo siguiente</p>
+
+  <video src="" controls>
+    <source src="rabbit320.mp4" type="video/mp4">
+    <source src="rabbit320.webm" type="video/webm">
+    <p>Your brouser doesnt support HTML5 video</p>
+  </video>
+
+  <p>Tomamos el atributo <kbd>src</kbd> del tag <kbd>&lt;video&gt;</kbd> y en su lugar incluimos elementos separados <kbd>source</kbd> que apunta a sus propias fuentes. En est caso el navegador ira a los elementos <kbd>source</kbd> y reproducira el primero de los elementos que el codec soporte. Incluir fuentes WebM y MP4 deberia bastar para reproducir el video en la mayoria de los browsers en estos dias</p>
+
+  <p>Cada elemento <kbd>source</kbd> tambien tiene un atributo <kbd>type</kbd>. Esto es opcional, pero se recomienda que se incluyan, ya que contienen <strong>MIME types</strong> de los archivos de video y los navegadores pueden leerlos y omitir inmediatamente los videos que no tienen. Si no estan incluidos, los navegadores cargaran e intentaran reproducir cada archivo hasta que encuentren uno que funcione, lo que llevara aun mas timepo y recursos.</p>
+
+  <h3>Mas atributos de la etiqueta video</h3>
+
+  <ul>
+    <li>autoplay: Hace que el audio o video empiece a reproducirse de inmediato, mientras se carga el resto de la pagina. Le aconsejamos no utilice video o audio de reproduccion automatica en sus sitios, ya que los usuarios pueden encontrarlo molesto.</li>
+    <li>loop: Hace que el video o audio comience a reproducirse cada vez que finaliza. Esto puede en ocaciones resultar molesto, asi que uilizalo solo si es realmente necesario</li>
+    <li>muted: hace que los medios se reproduzcan con el sonido apagado de forma predeterminada</li>
+    <li>poster: La URL de una imagen que se mostrará antes de reproducir el video. Esta destinado a ser utilizado para una pantalla de presentacion o pantalla publicitaria (miniatura del video)</li>
+    <li>preload: Se utiliza para almacenar en bufer archivos grandes; Puede tomar uno de estos tres valores:
+      <ul>
+      <li><strong>none</strong> no almacena el archivo en bufer</li>
+      <li><strong>auto</strong> almacena el archivo multimedia</li>
+      <li><strong>metadata</strong> almacena solo los metadatos del archivo</li></ul>
+    </li>
+  </ul>
+</body>
+
+</html>
