@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagenes responsivas</title>
+</head>
+<body>
+  <h1>Imagenes responsivas o adaptativas</h1>
+
+  <h2>Direccion de arte</h2>
+
+  <picture>
+    <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+      <source media="(min-width: 800px)" srcset="wlva-800w.jpg">
+        <img src="elva-800w.jpg" alt="Descripcion de la imagen">
+  </picture>
+  <p>En cualquier caso, se debe proveer un elemento img, with src and alt, justo antes del cierre de picture, de otra forma ninguna imagen aparecera. Esto provee un caso por defecto que aplicara cunado ninguna de las condiciones del source retorne true</p>
+</body>
+</html>
