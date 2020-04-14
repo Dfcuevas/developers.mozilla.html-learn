@@ -1,0 +1,29 @@
+Todos los atributos son opcionales, pero es una practica estandar establecer siempre al menos los atributos action y method
+
+	* El atributo action define la ubicacion (url) donde se envían los datos que el formulario ha recopilado cuando se validan.
+
+	* El atributo method define con que metodo http se envian los datos (generalmente get o post)
+
+El elemento <button>
+
+tambien acepta un atributo de type, que a su vez acepta uno de estos tres valores: submit, reset o button.
+
+	* Submit (predeterminado) envia los datos del formulario a la pagina web definida por el atributo action del elemento <form>
+
+	* Un clic en un boton reset restablece de inmediato todos los controles de formulario a su valor predeterminado. Desde el punto de vista de UX, esto se considera una mala practica, por lo que debes evitar usar este tipo de botones al menos que realmente tengas una buena razón para incluirlos.
+
+	* Un click en un boton BUTTON no hace... nada. Eso suena tonto, pero es muy utili para crear botones personalizados: puedes definir su funcion con JavaScript.
+
+NOTA//: Tambien puedes usar el elemento <input> con el atributo type correspondiente para generar un boton, por ejemplo <input type="submit">. La ventaja principal del elemento <button> es que el elemento <input> solo permite texto sin formato en su etiqueta, mientras que el elemento <button> permite contenido HTML completo, lo que permite generar botones creativos mas complejos. 
+
+//**********************ENVIAR LOS DATOS DEL FORMULARIO A UN SERVIDOR WEB *******************************//
+
+El elemento <form> define donde y como enviar los datos gracias a los atributos action y method.
+
+Proporcionamos un (name) a cada control del formulario. Los nombres son importantes tanto en el lado del cliente como del servidor; le dicen al navegador que nombre debe dar a cada dato y, en el lado del servidor, dejan que el servidor maneje cada dato por su nombre. Los datos del formulario se envían al servidor como pares nombre/valor.
+
+Para poner nombre a los diversos datos que se introducen en un formulario debes usar el atributo name en cada control de formulario que recopila un dato especifico.
+
+En nuestro ejemplo, el formulario envia tres datos denominados <<user_name>>, <<user_email>> y <<user-message>>. Esos datos se envían a la URL <<my-handling-form-page>> utilizando el metodo POST de HTTP.
+
+En el lado del servidor, la secuencia de comandos de la URL recibe los datos como una lista de tres elementos clave/valor contenidos en la solicitud HTTP. la forma en que este script maneja esos datos depende de ti.

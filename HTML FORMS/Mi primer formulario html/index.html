@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Primer formulario HTML</title>
+  <style>
+    body {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    form {
+      width: 400px;
+      margin: 0 auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 1em;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    form li + li { /* La regla form li + li indica que los cambios se aplicaran a los elementos li del form que sigan a directamente a un elemento li*/
+      margin-top: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 90px;
+      text-align: right;
+    }
+    input, textarea {
+      font: 1em sans-serif;
+      width: 74%;
+      box-sizing: border-box;
+      border: 1px solid #999;
+    }
+    input:focus, textarea:focus{
+      border-color: #000;
+    }
+    .button {
+      padding-left: 90px;
+    }
+    button{
+      margin-left: .5em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mi primer formulario HTML</h1>
+
+  <form action="/my-handling-form-page" method="post">
+    <ul>
+      <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name">
+      </li>
+      <li>
+        <label for="mail">Correo electronico:</label>
+        <input type="email" name="user_mail" id="mail">
+      </li>
+      <li><label for="msg">Mensaje:</label>
+        <textarea name="user_message" id="msg" cols="30" rows="10"></textarea>
+      </li>
+      <li class="button">
+        <button type="submit">Envíe su mensaje</button>
+      </li>
+    </ul>
+  </form>
+
+<h2>Un segundo Formulario</h2>
+
+<form action="">
+  <fieldset>
+    <legend>Tamaño del zumo de fruta</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small">
+      <label for="size_1">Pequeño</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium">
+      <label for="size_2">Mediano</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large">
+      <label for="size_3">Grande</label>
+    </p>
+  </fieldset>
+</form>
+
+<h2>Etiquetas Multiples</h2>
+
+<p>Los campos obligatorios se marcan con un <abbr title="required">*</abbr></p>
+
+<p>Puedes hacer esto</p>
+<div>
+  <label for="username">Nombre:</label>
+  <input type="text" name="username">
+  <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
+</div>
+<p>Seria mejor hacerlo así:</p>
+<div>
+  <label for="username">
+    <span>Nombre:</span>
+    <input type="text" id="username" name="username">
+    <abbr title="required" aria-label="required">*</abbr>
+  </label>
+</div>
+<p>Pero probablemente lo mejor es esto:</p>
+<div>
+  <label for="username">Nombre: <abbr title="required" aria-label="required">*</abbr></label>
+  <input type="text" id="username" name="username">
+</div>
+</body>
+
+</html>
