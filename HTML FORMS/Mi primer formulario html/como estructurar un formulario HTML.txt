@@ -1,0 +1,12 @@
+
+//************************** COMO ESTRUCTURAR UN FORMULARIO HTML ***************************//
+
+El elemento <form>
+
+define formalmente un formulario y los atributos que determinan el comportamiento del formulario
+
+NOTA//: Está estrictamente prohibido anidar un formulario dentro de otro formulario. Anidar formularios no es una buena idea porque puede ocasionar comportamientos impredecibles.
+
+//************************** LOS ELEMENTOS <FIELDSET> Y <LEGEND> ***************************//
+
+El elemento <fieldset> es una forma cómoda de crear grupos de controles de formulario (tambien denominados widgets) que comparten el mismo proposito, con fines semanticos y de aplicacion de estilo. Puedes etiquetar un elemento <fieldset> incluyendo un elemento <legend> justo debajo de la etiqueta de apertura <fieldset>. El contenido textual del elemento <legend> describe formalmente el proposito del elemento <fieldset> que esta incluido dentro. 
